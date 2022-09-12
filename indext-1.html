@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="jquery-2.1.1.min.js"></script>
+  
+  <style type="text/css">
+
+    *
+    {
+      margin: 0px;
+      padding: 0px;
+    }
+
+ 
+    .sidebar {
+        z-index: 100000;
+        right: 0;
+        position: absolute;
+        top: 28%;
+        padding: 0 12px 0 0;
+        border-radius: 20px 0 0 20px;
+    }
+    .sidebar > div {
+        cursor: pointer;
+        text-align: center;
+    }
+    .sidebar > div .code {
+        display: none;
+        position: absolute;
+        z-index: 9;
+        top: 0.1%;
+        right: 75px;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px 0 rgba(106, 115, 133, 0.22);
+        background-color: #ffffff;
+    }
+    .sidebar > div .code:after {
+        position: absolute;
+        top: 33%;
+        left: 100%;
+        content: '';
+        transform: translateY(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #ffffff;
+    }
+    .sidebar-wechat:hover .code {
+        display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  
+  <aside class="sidebar">
+      <div class="sidebar-wechat">
+   
+   
+          <img src="./image/suspension.png"
+               onmouseover="this.src='./image/suspensionClick.png'"
+               onmouseout="this.src='./image/suspension.png'"/>
+   
+          <div class="code" style="background-color: #ffffff;width: 360px;height: 200px;">
+              <div style="float:left;padding: 25px 11px 20px 28px;">
+                  <img style="width:140px;" src="./image/AndroidFormal.png">
+                  <p>下载安卓APP</p>
+              </div>
+              <div style="float:left;padding: 25px 20px 18px 11px;">
+                  <img style="width:140px;" src="./image/iosFormal.png">
+                  <p>下载苹果APP</p>
+              </div>
+          </div>
+   
+   
+      </div>
+  </aside>
+
+</body>
+</html>
