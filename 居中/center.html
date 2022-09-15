@@ -47,15 +47,14 @@
       display: block;
       width: 60px;
       height: 30px;
-      /*position: absolute;*/
-      /*margin: auto;*/
       border: 1px solid red;
+      line-height: 30px;
     }
 
     #txt a>img
     {
       width: 20px;
-      display: inline-block;
+      vertical-align: text-bottom;
     }
 
   </style>
@@ -66,6 +65,7 @@
   </a>
 
   <div>
+    <p>a标签文字垂直居中: a标签的 line-height 设置成和a高度相同；图片和文字水平: 图片的vertical-align 设置成text-bottom</p>
     <p id="txt">
       <a>AAA<img src="./image/sale_box.png">
       </a>
