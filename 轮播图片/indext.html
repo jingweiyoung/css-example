@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>轮播图测试</title>
+
+  <!-- 外部导入Css文件，链接式 -->
+
+  <link type="text/css" rel="stylesheet" href="./slideShow.css"/> 
+  <style>
+    *
+    {
+      padding: 0px;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <p>测试轮播图</p>
+
+  <hr id="hr1"/>
+
+  <!-- 建立一个div控件作为图片框 -->
+
+  <div class="imgBox">
+
+      <!-- alt：图片路径失败时替换显示内容 -->
+
+      <img class="img-slide img" src="images/img1.png" alt="img1">
+
+      <img class="img-slide img" src="images/img2.png" alt="img2">
+
+      <img class="img-slide img" src="images/img3.png" alt="img3">
+
+  </div>
+  
+  
+  <script type="text/javascript">
+
+        // index：索引， len：长度
+
+        var index = 0, len;
+
+        // 类似获取一个元素数组
+
+        var imgBox = document.getElementsByClassName("img-slide");
+
+        len = imgBox.length;
+
+        imgBox[index].style.display = 'block';
+
+        // 逻辑控制函数
+
+        function slideShow() {
+
+            index ++;
+
+            // 防止数组溢出
+
+            if(index >= len) index = 0;
+
+            // 遍历每一个元素
+
+            for(var i=0; i<len; i++) {
+
+                imgBox[i].style.display = 'none';
+
+            }
+
+            // 每次只有一张图片显示
+
+            imgBox[index].style.display = 'block';
+
+        }
+
+        // 定时器，间隔3s切换图片
+
+        setInterval(slideShow, 3000);
+
+  </script>
+
+</body>
+</html>
