@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>侧边悬浮窗demo</title>
+  
+  <script src="jquery-2.1.1.min.js"></script>
+  
+  <style type="text/css">
+
+    *
+    {
+      margin: 0px;
+      padding: 0px;
+    }
+
+ 
+    .sidebar {
+            position         : fixed;
+            z-index          : 88;
+            right            : 0;
+            bottom           : 23%;
+            padding          : 14px 12px 0;
+            box-shadow       : 0 4px 38px 0 rgba(255, 96, 115, 0.2);
+            border-radius    : 20px 0 0 20px;
+            background-color : #45ccbd;
+    }
+    .sidebar > div {
+        cursor     : pointer;
+        text-align : center;
+    }
+    .sidebar > div img {
+        width : 40px;
+    }
+    .sidebar > div h3 {
+        font-size : 15px;
+        font-weight: 500;
+        color : #fff;
+    }
+    .sidebar > div .code {
+        display          : none;
+        position         : absolute;
+        z-index          : 9;
+        top              : 55%;
+        right            : 90px;
+        border-radius    : 8px;
+        box-shadow       : 0 6px 12px 0 rgba(106, 115, 133, 0.22);
+        background-color : #ffffff;
+    }
+    .sidebar > div .code:after {
+        position     : absolute;
+        top          : 33%;
+        left         : 100%;
+        content      : '';
+        transform    : translateY(-50%);
+        border-width : 5px;
+        border-style : solid;
+        border-color : transparent transparent transparent #ffffff;
+    }
+    .sidebar-wechat:hover .code {
+        display : block;
+    }
+
+
+  </style>
+</head>
+
+  <body>
+    
+    
+    
+    <aside class="sidebar">
+        <div>
+            <img src="https://s2.ax1x.com/2019/08/05/e2Lk1H.png"
+                 alt="联系客服icon">
+            <h3>
+                在线客服
+            </h3>
+        </div>
+    
+        <div>
+            <img src="https://s2.ax1x.com/2019/08/05/e2Lk1H.png"
+                 alt="联系客服icon">
+            <h3>
+                APP下载
+            </h3>
+        </div>
+    
+        <!-------------------   鼠标移入展示二维码    ---------------->
+        <div class="sidebar-wechat">
+            <img src="https://s2.ax1x.com/2019/08/05/e2Lk1H.png"
+                 alt="联系客服icon">
+            <h3>
+                公众号
+            </h3>
+            <div class="code">
+                <img src="https://s2.ax1x.com/2019/08/05/e2Lk1H.png"
+                     alt="联系客服icon">
+            </div>
+        </div>
+    
+        <div onclick="toTop()">
+            <img src="https://s2.ax1x.com/2019/08/05/e2Lk1H.png"
+                 alt="联系客服icon">
+            <h3>
+                回顶部
+            </h3>
+        </div>
+    </aside>
+  </body>
+    
+  <script>
+  // 回到顶部效果使用js实现
+  function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+
+
+</html>
